@@ -35,11 +35,13 @@ void main() {
 ```
 
 To run tests use the following command in your terminal:
+
 ```
-pub run test -r <compact|expanded|github|json>
+dart test -r <compact|expanded|github|json>
 ```
-Please see dart dev's [test package](https://pub.dev/packages/test) 
-for more information.
+
+Please see dart dev's [test package](https://pub.dev/packages/test) for more
+information.
 
 ## Features and bugs
 
