@@ -17,5 +17,5 @@ jobs:
       - name: Install dart dependencies
         run: dart pub get
 
-      - name: Hello world
+      - name: Run Tests
         run: dart test -r expanded
