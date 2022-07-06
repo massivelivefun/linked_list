@@ -44,6 +44,13 @@ class LinkedList<T> {
     throw NoSuchElementException('The list is empty.');
   }
 
+  T getBack() {
+    if (_length > 0) {
+      return _tail!.getData()!;
+    }
+    throw NoSuchElementException('The list is empty.');
+  }
+
   void addFront(final T element) {
     if (_head == null && _tail == null) {
       _head = _Node(element, _head);
