@@ -120,6 +120,7 @@ class LinkedList<T> {
 
   void reverseList() {
     var current = _head;
+    var tail = _head;
     var next;
     var prev;
 
@@ -129,6 +130,7 @@ class LinkedList<T> {
       prev = current;
       current = next;
     }
+    _tail = tail;
     _head = prev;
   }
 }
