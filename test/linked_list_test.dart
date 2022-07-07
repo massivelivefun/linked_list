@@ -3,7 +3,6 @@ import 'package:linked_list/no_such_element_exception.dart';
 import 'package:test/test.dart';
 
 void main() {
-  
   group('addFront()', () {
     test('Empty list', () {
       var list = LinkedList();
@@ -80,7 +79,7 @@ void main() {
       var list = LinkedList();
       expect(() => list.getElementAt(0),
         throwsA(predicate((e) => e is NoSuchElementException &&
-          e.message == 'No element at index 0.')));
+          e.message == 'The list is empty.')));
     });
 
     test('List of one && index @ 0', () {
@@ -180,6 +179,7 @@ void main() {
       var list = LinkedList();
       list.addFront(1);
       list.reverseList();
+      expect(list.getBack(), equals(1));
       expect(list.toList(),
         orderedEquals([1]));
     });
@@ -189,6 +189,7 @@ void main() {
       list.addFront(2);
       list.addFront(1);
       list.reverseList();
+      expect(list.getBack(), equals(1));
       expect(list.toList(),
         orderedEquals([2, 1]));
     });
@@ -199,6 +200,7 @@ void main() {
       list.addFront(2);
       list.addFront(1);
       list.reverseList();
+      expect(list.getBack(), equals(1));
       expect(list.toList(),
         orderedEquals([3, 2, 1]));
     });
