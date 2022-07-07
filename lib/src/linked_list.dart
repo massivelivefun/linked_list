@@ -77,6 +77,14 @@ class LinkedList<T> {
       throw NoSuchElementException('Negative indices are not permitted.');
     }
 
+    if (index == 0) {
+      return getFront();
+    }
+
+    if (index == _length) {
+      return getBack();
+    }
+
     var curPos = 0;
     var current = _head;
 
